@@ -55,7 +55,7 @@ if ($res['success'] == true) {
 
     //inicio script grabar datos en csv
     if ($_POST['form-type'] == "contact") $fichero = 'cafecito 3er sesion.csv';
-    else $fichero = 'Octubre 2020.csv';
+    else $fichero = 'Mentoria Octubre 2020.csv';
     //nombre archivo ya creado
     //crear linea de datos separado por coma
     $fecha = date("Y-m-d H:i:s");
