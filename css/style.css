@@ -37,25 +37,48 @@ Author: Divine-Store
 -------------------------------------------------------------------*/
 @font-face{
 	font-family: 'Gotham';
-	src: url(../fonts/gotham-medium.ttf);
+	src: url('../fonts/gotham-Medium.ttf');
+	src: url('../fonts/Gotham-Medium.eot');
+    src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Medium.woff2') format('woff2'),
+        url('../fonts/Gotham-Medium.woff') format('woff'),
+		url('../fonts/Gotham-Medium.ttf') format('truetype'),
+		url('../fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
 	font-weight: 400;
 	
 }
 @font-face{
 	font-family: 'Gotham';
-	src: url(../fonts/gotham-bold.otf);
+	src: url('../fonts/Gotham-Bold.otf');
+	src: url('../fonts/Gotham-Bold.eot');
+    src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Bold.woff2') format('woff2'),
+        url('../fonts/Gotham-Bold.woff') format('woff'),
+		url('../fonts/Gotham-Bold.ttf') format('truetype'),
+		url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
 	font-weight: bold;
 
 }
 @font-face{
 	font-family: 'Gotham';
-	src: url(../fonts/gotham-book.ttf);
+	src: url('../fonts/gotham-book.ttf');
+	src: url('../fonts/gotham-book.eot');
+    src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/gotham-book.woff2') format('woff2'),
+        url('../fonts/gotham-book.woff') format('woff'),
+		url('../fonts/gotham-book.ttf') format('truetype')
+		url('../fonts/Gotham-book.svg#gotham-book') format('svg');
 	font-weight: 300;
 
 }
 @import url('https://fonts.googleapis.com/css?family=Gotham:300,300i,400,400i,500,500i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
 /* 1. GLOBAL STYLES */
+
+
+input{
+	
+}
 
 body {
 	background: #fff;
@@ -479,7 +502,6 @@ ul, ol, li {
 	border: 0px solid #e5e5e5;
 	border-radius: 4px;
 	margin-bottom: 18px;
-	font-family: 'Gotham', sans-serif!important;
 	-webkit-user-select: text;
     /* transform: translateZ(0); */
 }

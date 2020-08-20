@@ -75,7 +75,7 @@ if ($res['success'] == true) {
     $insta = isset($insta) ? "Instagram: $insta<br><br>" : '';
     $otras = isset($otras) ? "Otras redes: $otras<br><br>" : '';
 
-    $cuerpo1 = $name2 . $email2 . $wp . $face . $insta . $otras . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
+    $cuerpo1 = $name2 . $email2 . $wp . $localidad . $face . $insta . $otras . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
 
     $cuerpo2 = '
 <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom:50px;width: 100%;">
@@ -127,7 +127,7 @@ if ($res['success'] == true) {
             echo "no se pudo enviar" . $mail_enviado2;
         }
     } else {
-        $mail_enviado = enviarMail($to1, $asunto1, $cuerpo1);
+        $mail_enviado = enviarMail($to1, "Registro Mentoría Grupal", $cuerpo1);
         if ($mail_enviado) {
             header("Location: graciasmentoria.html");
             exit;
