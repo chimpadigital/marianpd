@@ -6866,3 +6866,9 @@ ul.objetivos.check2 li::before{
 .footerP p:hover{
 	color:#FF854D;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

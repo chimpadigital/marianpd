@@ -12,47 +12,73 @@ use PHPMailer\PHPMailer\Exception;
 // Load Composer's autoloader
 require 'vendor/autoload.php';
 
-// Enter your email address. If you need multiple email recipes simply add a comma:conacto@marianpd.com
-$to = "contacto@marianpd.com";
+$url = "https://www.google.com/recaptcha/api/siteverify";
+$data = [
+    'secret' => "6Lf_eMEZAAAAAMjtqaLhwwc5Uw2HrkcpHmLiuGyW",
+    'response' => $_POST['token'],
+    'remoteip' => $_SERVER['REMOTE_ADDR']
+];
 
-// Form Fields
-$name = isset($_POST["name"]) ? $_POST["name"] : null;
-$email = isset($_POST["email"]) ? $_POST["email"] : null;
-$wp = isset($_POST["wp"]) ? $_POST["wp"] : null;
-$face = isset($_POST["face"]) ? $_POST["face"] : null;
-$insta = isset($_POST["insta"]) ? $_POST["insta"] : null;
-$otras = isset($_POST["otras"]) ? $_POST["otras"] : null;
-$subject = 'Nuevo Registro Cafecito virtual';
-$subject_user = 'Tu inscripción al cafecito virtual está confirmada';
+$options = array(
+    'http' => array(
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($data)
+    )
+);
+
+# Creates and returns stream context with options supplied in options preset 
+$context  = stream_context_create($options);
+# file_get_contents() is the preferred way to read the contents of a file into a string
+$response = file_get_contents($url, false, $context);
+# Takes a JSON encoded string and converts it into a PHP variable
+$res = json_decode($response, true);
+
+if ($res['success'] == true) {
+
+    // Enter your email address. If you need multiple email recipes simply add a comma:conacto@marianpd.com
+    $to = "contacto@marianpd.com";
+
+    // Form Fields
+    $name = isset($_POST["name"]) ? $_POST["name"] : null;
+    $email = isset($_POST["email"]) ? $_POST["email"] : null;
+    $wp = isset($_POST["wp"]) ? $_POST["wp"] : null;
+    $face = isset($_POST["face"]) ? $_POST["face"] : null;
+    $insta = isset($_POST["insta"]) ? $_POST["insta"] : null;
+    $otras = isset($_POST["otras"]) ? $_POST["otras"] : null;
+    $subject = 'Nuevo Registro Cafecito virtual';
+    $subject_user = 'Tu inscripción al cafecito virtual está confirmada';
 
 
-// $recaptcha = $_POST['g-recaptcha-response'];
+    // $recaptcha = $_POST['g-recaptcha-response'];
 
-//inicio script grabar datos en csv
-$fichero = 'cafecito 3er sesion.csv';//nombre archivo ya creado
-//crear linea de datos separado por coma
-$fecha=date("Y-m-d H:i:s");
-$linea = $fecha.";".$name.";".$email.";".$wp.";".$face.";".$insta.";".$otras."\n";
-// Escribir la linea en el fichero
-file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
-//fin grabar datos
+    //inicio script grabar datos en csv
+    if ($_POST['form-type'] == "contact") $fichero = 'cafecito 3er sesion.csv';
+    else $fichero = 'Octubre 2020.csv';
+    //nombre archivo ya creado
+    //crear linea de datos separado por coma
+    $fecha = date("Y-m-d H:i:s");
+    $linea = $fecha . ";" . $name . ";" . $email . ";" . $wp . ";" . $face . ";" . $insta . ";" . $otras . "\n";
+    // Escribir la linea en el fichero
+    file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
+    //fin grabar datos
 
 
-$name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
-$email2 = isset($email) ? "Email: $email<br><br>" : '';
-$wp = isset($wp) ? "Whatsapp: $wp<br><br>" : '';
-$face = isset($face) ? "Facebook: $face<br><br>" : '';
-$insta = isset($insta) ? "Instagram: $insta<br><br>" : '';
-$otras = isset($otras) ? "Otras redes: $otras<br><br>" : '';
+    $name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
+    $email2 = isset($email) ? "Email: $email<br><br>" : '';
+    $wp = isset($wp) ? "Whatsapp: $wp<br><br>" : '';
+    $face = isset($face) ? "Facebook: $face<br><br>" : '';
+    $insta = isset($insta) ? "Instagram: $insta<br><br>" : '';
+    $otras = isset($otras) ? "Otras redes: $otras<br><br>" : '';
 
-$cuerpo1 = $name2 . $email2 . $wp . $face . $insta . $otras . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
+    $cuerpo1 = $name2 . $email2 . $wp . $face . $insta . $otras . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
 
-$cuerpo2='
+    $cuerpo2 = '
 <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom:50px;width: 100%;">
     <table width="600px" align="center" cellpadding="0" cellspacing="0" style="background-color:white">
         <tr style="background-color:#EAE4E1;">
             <td style="width:500px; height:40px; padding:15px 34px;font-family: Arial, Helvetica, sans-serif">
-                <h3 style="color:#474747">¡Hola, hola! '.$name.'</h3>
+                <h3 style="color:#474747">¡Hola, hola! ' . $name . '</h3>
                 <h1 style="color:#B16063">¡Tú inscripción está confirmada!</h1>
             </td>
         </tr>
@@ -77,64 +103,69 @@ $cuerpo2='
     </table>
 </div>
         ';
+    $to1 = $to;
+    $to2 = $_POST["email"];
+    $asunto1 = $subject;
+    $asunto2 = $subject_user;
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form-type'] == "contact") {
+        //If you don't receive the email, enable and configure these parameters below: 
+        $mail_enviado = enviarMail($to1, $asunto1, $cuerpo1);
+        //$mail_enviado = enviarMail("jonathansosa@gmail.com", $asunto1, $cuerpo1);
+        //echo 'envio 1 '.$mail_enviado;
+        $mail_enviado2 = enviarMail($to2, $asunto2, $cuerpo2);
+        //echo 'envio 2 '.$mail_enviado2;
+        if (true) {
+            // echo "<script>location.href='../gracias.html';</script>";
+            header("Location: gracias.html");
+            exit;
+        } else {
+            echo "no se pudo enviar" . $mail_enviado2;
+        }
+    } else {
+        $mail_enviado = enviarMail($to1, $asunto1, $cuerpo1);
+        if ($mail_enviado) {
+            header("Location: graciasmentoria.html");
+            exit;
+        } else {
+            echo "no se pudo enviar" . $mail_enviado;
+        }
+    }
+}
 
 
-$to1=$to;
-$to2=$_POST["email"];
-$asunto1=$subject;
-$asunto2=$subject_user;
-
-
-
-function enviarMail($to,$asunto,$cuerpo){
+function enviarMail($to, $asunto, $cuerpo)
+{
     $mail = new PHPMailer(true);
-    
+
     try {
         //Server settings
         $mail->SMTPDebug = SMTP::DEBUG_OFF;                      // Enable verbose debug output
-        $mail->isSMTP();      
-        
+        $mail->isSMTP();
+
         $mail->Host = 'c1800221.ferozo.com';
         $mail->Port = 465;
-        $mail->CharSet="UTF-8";
+        $mail->CharSet = "UTF-8";
         $mail->SMTPSecure = 'ssl';
         $mail->SMTPAuth = true;
         $mail->Username = "contacto@marianpd.com";
-        $mail->Password = "h6/U6bx5xM";   
+        $mail->Password = "h6/U6bx5xM";
         // Send using SMTP
-        
+
         //Recipients
         $mail->setFrom('contacto@marianpd.com', 'Marian PD');
         $mail->addCC('marianapd.tur@gmail.com');
         $mail->addAddress($to);               // Name is optional
-        
+
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = $asunto;
         $mail->Body    = $cuerpo;
         $mail->AltBody = $cuerpo;
-        
+
         $mail->send();
         return true;
     } catch (Exception $e) {
         return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
-if( $_SERVER['REQUEST_METHOD'] == 'POST') {
-    //If you don't receive the email, enable and configure these parameters below: 
-    $mail_enviado=enviarMail($to1,$asunto1,$cuerpo1);
-    //echo 'envio 1 '.$mail_enviado;
-    $mail_enviado2=enviarMail($to2,$asunto2,$cuerpo2);
-    //echo 'envio 2 '.$mail_enviado2;
-    if($mail_enviado2)
-                {
-                // echo "<script>location.href='../gracias.html';</script>";
-                header("Location: gracias.html");exit;
-                }
-                else
-                {
-                    echo "no se pudo enviar".$mail_enviado2 ;
-                }          
-    
-}
-?>
