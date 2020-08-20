@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+
+	<title>Marian.pd</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="images/favicon.png">
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- ICONS -->
+	<!-- <link rel="stylesheet" href="css/ilmosys-icons.css"> -->
+	<link rel="stylesheet" href="css/icons/fontawesome/css/style.css">
+	<!-- <link rel="stylesheet" href="css/icons/style.css"> -->
+	<!-- <link rel="stylesheet" href="css/icons/icon2/style.css">
+	<link rel="stylesheet" href="js/vendors/swipebox/css/swipebox.min.css"> -->
+    
+
+	<!-- THEME / PLUGIN CSS -->
+	<link rel="stylesheet" href="js/vendors/slick/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+    
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '3207452602639019');
+	fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=3207452602639019&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167872006-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-167872006-1');
+	</script>
+	<!-- Hotjar Tracking Code for https://marianpd.com -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1859714,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+</head>
+<body id="page-top"> 
+
+<div class="body">
+	<!-- HEADER -->
+	<header>
+		<nav class="navbar-inverse navbar-lg navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand brand"><img src="images/logo.svg" alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right navbar-login">
+						<li>
+							<a href="#contacto" class="page-scroll"> Cafecito Virtual  <i class="fa fa-chevron-right"></i></a>
+						</li>
+						<li>
+							<a href="mentoria.html" class="page-scroll"> Mentoría Grupal  <i class="fa fa-chevron-right"></i></a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- INTRO -->
+	<div id="home" class="intro intro1 d-flex align-center">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-5">
+					<h2 class="masterclass mb-3">Cafecito Virtual sin costo</h2>
+					<h2 class="marian text-white mb-1">Activá tu Magia</h2>
+					<h2 class="marian text-white">en el mundo online</h2>
+					<img src="images/separador-rosa.svg" class="mb-4 mt-3" alt="">
+					<div class="row">
+						
+						<div class="col-lg-7">
+							<a href="#fechas" class="btn btn-md btn-primary page-scroll">Ver Más</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- SERVICES -->
+	<div class="motivos" id="fechas">
+		<div class="container">			
+			<div class="row align-center d-flex">
+
+				<!-- <div class="col-md-1">
+				</div> -->
+				<div class="col-md-3 mb-3 text-sm-center">
+					<img src="images/cafe2.svg" alt=""><br>
+					<img src="images/separador-rosa-mini.svg" class="mt-3 mb-3" >
+					<h2>Próximos<br>encuentros</h2>
+				</div>
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="encuentros borde-gris disabled">
+								<img src="images/fecha-pasada.svg" alt="">
+								<h2 class="mt-2 mt-sm-0">23/05/20</h2>
+								<p class="mt-2">Activá tu magia<br>en el mundo online</p>
+								<a href="" class="btn btn-lg btn-primary mt-2 mb-sm-0 text-center" aria-disabled="true">Finalizado</a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="encuentros borde-gris disabled">
+								<img src="images/fecha-pasada.svg" alt="">
+								<h2 class="mt-2 mt-sm-0">20/06/20</h2>
+								<p class="mt-2">¿Cómo lograr una comunidad en Instagram?</p>
+								<a href="" class="btn btn-lg btn-primary mt-2 mb-sm-0 page-scroll text-center">Finalizado</a>
+							</div>
+						</div>
+						<!-- <div class="col-md-4">
+							<div class="encuentros borde-activo active">
+								<img src="images/fecha-activa.svg" alt="">
+								<h2 class="mt-2 text-white mt-sm-0">08/08/20</h2>
+								<p class="mt-2 text-white">Creatividad y Diseño para tus Redes Sociales</p>
+								<a href="#contacto" class="btn btn-lg btn-primary mt-2 mb-sm-0 text-center">Reservar lugar</a>
+							</div>
+						</div> -->
+						<div class="col-md-4">
+							<div class="encuentros borde-activo active">
+								<img src="images/fecha-activa.svg" alt="">
+								<h2 class="mt-2 text-white mt-sm-0">29/08/20</h2>
+								<p class="mt-2 text-white">Creatividad y Diseño para tus Redes Sociales</p>
+								<a href="#contacto" class="btn btn-lg btn-primary mt-2 mb-sm-0 text-center page-scroll">Reservar lugar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-md-1">
+				</div> -->
+			</div>	
+		</div>
+	</div>
+
+	<!-- Intro 1 -->
+	<div class="intro mt-5 mb-5" id="intro">
+		<div class="container">
+			<div class="row center-content">
+				<div class="col-md-7 text-center">
+					<!-- <h2>Cafecito virtual Sin costo</h2>
+					<img src="images/separador-rosa-mini.svg" class="mt-2 text-center animate__animated animate__fadeIn wow mb-3" data-wow-delay=".4s" alt=""> -->
+					<p>Creé el Cafecito Virtual para acompañarte y ayudarte a potenciar tu emprendimiento trabajando sobre diversos conceptos esenciales con los que vas a poder mejorar tu comunicación digital y crear una estrategia de contenidos con objetivos claros, y además, vas a conocer a emprendedoras muy lo más con quienes compartirás  la experiencia.</p>
+					<a href="#contacto" class="btn btn-lg btn-primary space20 page-scroll mt-3">¡Quiero inscribirme al próximo cafecito!</a>
+				</div>
+
+				<div class="col-md-5">
+					<img src="images/masterclass1.jpg" class="center-block img-responsive" alt=""/>
+				</div>					
+			</div>
+		</div>
+	</div>
+	
+	<!-- TESTIMONIALS -->
+	<div id="reviews" class="testimonials-white">
+    
+    <div class="container-fluid" style="padding: 0px;">
+		
+		<div class="row d-flex">
+			<div class="col-md-3 col-xs-12 col-sm-12 hidden-sm hidden-xs">
+				<img src="images/master1.jpg" class="img-responsive" alt="">
+			</div>
+			<div class="col-md-6 col-xs-12 col-sm-12 text-center d-flex align-center">
+				<div class="about-inline text-center ">
+					<img src="images/corazon.svg" class="mb-4" alt="">
+					<h3 class="mb-4">Quiero que logres enamorar a tu audiencia para que tus clientes te recuerden y te sigan eligiendo y por ese motivo</h3>
+					<hr class="mb-4">
+					<h2 class="mb-4">¡Te invito a ser parte de un Ciclo de Cafecitos virtuales!</h2>
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-12 text-right">
+				<img src="images/master2.jpg" class="img-responsive"  alt="" style="float: right;">
+			</div>
+			</div>
+		</div>
+</div>
+
+	<!-- TESTIMONIALS -->
+    
+	<!-- PARALLAX -->
+	<section class="parallax-content parallax1 text-center" data-stellar-background-ratio="0.4" id="cafe">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="images/cafe-img.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-6">
+					<div class="about-inline mt-5 text-center ">
+						<img src="images/cafe.svg" class="mb-4" alt="">
+						<h4 class="mb-4">Vamos a conversar sobre los desafíos del mundo emprendedor, tu propuesta de valor y cómo diferenciarte de tu competencia, la planificación de tus redes sociales y las formas de mejorar tu estrategia digital para que logres conectar con tus clientes. </h4>
+						<a href="#contacto" class="btn btn-lg btn-primary space20 page-scroll mt-4">Quiero Inscribirme</a>
+					</div>
+				</div>
+			</div>
+        </div>
+	</section>
+    
+	<div class="space100"></div>
+   
+    
+    <!-- SERVICES -->
+	<div class="motivos">
+		<div class="container">
+			<div class="about-inline mb-4 text-center">
+				<div class="container">
+					<h2>Esta propuesta es para vos queres... </h2>
+				</div>
+			</div>
+			
+			<div class="service3 icon-box-square">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="text-center">
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h2>Renovarte en el mundo online</h2>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="text-center">
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h2>Mejorar tu estrategia digital</h2>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="text-center">
+								
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h2>Ser parte de una red de emprendedoras muy lo más</h2>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+    
+
+	<!-- PARALLAX -->
+	<section class="parallax-content parallax2 text-center" data-stellar-background-ratio="0.4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 tc text-center ">
+						<h4 class="mb-3">¡Los cupos son súper limitados! </h4>
+						<a href="#contacto" class="btn btn-lg btn-primary page-scroll">¡ACTIVÁ TU MAGIA!</a>
+					</div>
+				</div>
+			</div>
+	</section>
+    
+	<!-- INFO CONTENT -->
+	<div class="info-content">
+		<div class="container-fluid">
+			<div class="row center-content">
+				<div class="col-md-5 d-flex justify-center">
+					<div class="institucional">
+						<h2>Acerca de mí</h2>
+						<img src="images/separador-marron.svg" class="mt-1" alt="">
+						<p class="mt-3">Mi nombre es Marian y me especializo en la creación de proyectos y estrategias digitales.</p>
+						<p>
+							Actualmente trabajo con empresas y muy especialmente, con emprendedoras, asesorando y guiando a mujeres que quieren crecer personal y profesionalmente de la mano de sus proyectos. Las acompaño en el proceso de creación de sus emprendimientos y a trabajar sobre estrategias que potencien su comunicación digital. 
+						</p>
+						<p class="mb-3">
+							Soy creadora de eventos y experiencias para emprendedoras y en esta instancia, toca encontrarnos en un cafecito virtual y vernos en una súper masterclass sin costo pensada especialmente para emprendedoras apasionadas por sus proyectos.
+							
+						</p>
+						<a href="#contacto" class="btn btn-lg btn-primary mt-3 page-scroll">¡QUIERO RESERVAR MI LUGAR!</a>
+					</div>
+				</div>
+				<div class="col-md-7 text-center" style="padding: 0px;">
+					<img src="images/marian.jpg" class="img-responsive" style="width: 100%;" alt="">
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<!-- Intro 2 -->
+	<div class="intro intro-benifits2" id="contacto2">
+		<div class="container-fluid">
+			<div class="row center-content">
+				<div class="col-md-5 info" style="background-image: url(images/contacto.jpg);background-size: cover;">
+					<h3>Cafecito Virtual</h3>
+					<img src="images/separador-negro.svg" class="separador mb-3 mt-2" alt="">
+					<p class="mb-2"><b>Se dictará vía ZOOM el:</b></p>
+					<p><img src="images/fecha.svg" alt=""> Sábado 29 de Agosto</p>
+					<p><img src="images/hora.svg" alt=""> 14:30 pm</p>
+
+					<p class="mt-3">Recibirás un mail confirmando tu<br>inscripción y el código de acceso</p>
+					<h4 class="mt-3">Te espero allí.</h4>
+					<img src="images/logo-contacto.svg" alt="">
+					<a href="#contacto" class="btn btn-primary hidden-sm hidden-xs mt-4"> Asegurá tu lugar completando el formulario  <i class="fa fa-chevron-right"></i></a>
+					<a href="#contacto" class="btn btn-primary mt-4 hidden-lg hidden-md page-scroll" style="width: 100%;"> Asegurá tu lugar<br>completando el formulario <br><i class="fa fa-chevron-down"></i></a>
+				</div>	
+                <div class="col-md-7">
+					<div class="intro-form" id="contacto">
+						<h4>Inscribite al Cafecito Virtual Gratis</h4>
+						<script type="text/javascript" src="https://v3.envialosimple.com/form/renderwidget/format/widget/AdministratorID/134417/FormID/1/Lang/es"></script>
+						<!-- <form action="contact-form.php" method="POST">
+							<input name="form-type" value="contact" type="hidden">
+							
+								<div class="row">
+									<div class="col-md-6 col-sm-12 form-group">
+										<input name="name" placeholder="Nombre y Apellido" required type="text"  class="form-control">
+									</div>
+									<div class="col-md-6 col-sm-12 form-group">
+										<input name="email" placeholder="Email" required type="email"  class="form-control">
+									</div>
+									<div class="col-lg-12 col-sm-12 form-group">
+										<input name="wp" placeholder="Whatsapp" required type="number"  class="form-control">
+									</div>
+									<div class="col-lg-12 col-sm-12 form-group">
+										<p class="mt-2">Redes sociales de tu emprendimiento</p>
+										<input name="face" placeholder="Facebook:" type="text" class="form-control">
+									</div>
+									<div class="col-lg-12 col-sm-12 form-group">
+										<input name="insta" placeholder="Instagram:" type="text" class="form-control">
+									</div>
+									<div class="col-lg-12 col-sm-12 form-group">
+										<input name="otras" placeholder="Otras:" type="text" class="form-control">
+									</div>
+								</div>
+								<button class="btn btn-lg btn-primary mt-2" type="submit">Reservar lugar</button>
+						
+						</form> -->
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+ 
+ 
+	
+
+
+
+<!-- JAVASCRIPT =============================-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/vendors/slick/slick.min.js"></script> -->
+<script src="js/vendors/jquery.easing.min.js"></script>
+<script src="js/vendors/stellar.js"></script>
+<!-- <script src="js/vendors/isotope/isotope.pkgd.js"></script>
+<script src="js/vendors/swipebox/js/jquery.swipebox.min.js"></script> -->
+<script src="js/main.js"></script>
+<!-- <script src="js/vendors/mc/jquery.ketchup.all.min.js"></script> -->
+<!-- <script src="js/vendors/mc/main.js"></script> -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+<!-- <script src="js/vendors/gmap.js"></script> -->
+</body>
+
+</html>
+
+

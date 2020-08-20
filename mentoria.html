@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+
+	<title>Marian.pd</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="images/favicon.png">
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- ICONS -->
+	<!-- <link rel="stylesheet" href="css/ilmosys-icons.css"> -->
+	<link rel="stylesheet" href="css/icons/fontawesome/css/style.css">
+	<!-- <link rel="stylesheet" href="css/icons/style.css"> -->
+	<!-- <link rel="stylesheet" href="css/icons/icon2/style.css">
+	<link rel="stylesheet" href="js/vendors/swipebox/css/swipebox.min.css"> -->
+    
+
+	<!-- THEME / PLUGIN CSS -->
+	<link rel="stylesheet" href="js/vendors/slick/slick.css">
+	<link rel="stylesheet" href="css/style.css?version=2.2">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '3207452602639019');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=3207452602639019&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167872006-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-167872006-1');
+	</script>
+	<!-- Hotjar Tracking Code for https://marianpd.com -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1859714,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+</head>
+<body id="page-top"> 
+
+<div class="body">
+	<!-- HEADER -->
+	<header>
+		<nav class="navbar-inverse navbar-lg navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand brand"><img src="images/logo.svg" alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right navbar-login">
+						<!-- <li>
+							<a href="masterclass.html" class="page-scroll"> Masterclass  <i class="fa fa-chevron-right"></i></a>
+						</li> -->
+						<li>
+							<a href="#contacto" class="page-scroll"> Más Info <i class="fa fa-chevron-right"></i></a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</nav>
+	</header>
+
+		<!-- INTRO -->
+		<div id="home" class="intro bg-intro d-flex align-center">
+			<!-- <div class="overlay"></div> -->
+			<div class="container w-100">
+				<div class="row align-center d-flex row">
+					<div class="col-sm-12 col-md-5 intro-form">
+						<h2 class="masterclass mb-3 animate__animated animate__fadeInLeft">Mentoría Grupal</h2>
+						<h2 class="marian text-white mb-1 animate__animated animate__fadeInLeft">Activá tu Magia</h2>
+						<img src="images/separador-rosa.svg" class="mt-3 animate__animated animate__fadeIn" alt="">
+						<p class=" mb-4 mt-4 animate__animated animate__fadeInLeft animate__delay-1s">¡Si sos una Emprendedora Apasionada
+							por su proyecto, esta propuesta es para vos!</p>
+							<a href="#cafe" class="btn btn-md btn-primary page-scroll animate__animated animate__fadeInLeft animate__delay-1s">Más Info</a>
+							<a href="#contacto" class="btn btn-md btn-line page-scroll animate__animated animate__fadeInLeft animate__delay-1s">Ver Programa</a>
+							
+					</div>
+						
+					<div class="col-md-7 intro3 hidden-xs hidden-sm animate__animated animate__fadeIn wow"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Intro 1 -->
+		<div class="intro mt-5 mb-5" id="cafe">
+			<div class="container">
+				<div class="row center-content">
+					<div class="col-md-7 text-center">
+						<h2 class="animate__animated animate__fadeInDown wow">¿Qué es una mentoría grupal?</h2>
+						<img src="images/separador-rosa-mini.svg" class="mt-2 mb-2" alt="">
+						<p class="font-light animate__animated animate__fadeInUp wow">Se trata de un asesoramiento intensivo con el principal objetivo de transformar tu proyecto en el mundo online trabajando sobre diversos conceptos que te ayudarán a comunicar tu propuesta de valor y a potenciar tu estrategia digital. <b>Que sea grupal significa que llevarás el asesoramiento con emprendedoras que están en tu misma situación,</b> con quienes compartirás la experiencia para crecer aún más, en comunidad. </p>
+						<a href="#contacto" class="btn btn-lg btn-primary space20 page-scroll mt-3 animate__animated animate__bounceIn wow" data-wow-delay=".4s">¡QUIERO SABER MÁS!</a>
+					</div>
+					
+					<div class="col-md-5">
+						<img src="images/mentoria.png" class="center-block img-responsive animate__animated animate__fadeInRight wow" alt=""/>
+					</div>					
+				</div>
+			</div>
+		</div>
+
+		<!-- PARALLAX -->
+		<section class="parallax-content cta-oscuro text-center " data-stellar-background-ratio="0.4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 tc text-center animate__animated animate__fadeInUp wow">
+						<h1 class="mb-3 mb-sm-0 text-white">Ver programa y precio </h1>
+						<a href="#contacto" class="btn btn-lg btn-light page-scroll">Click Aquí</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- TESTIMONIALS -->
+		<div id="reviews" class="testimonials-white">
+			
+			<div class="container" style="padding: 0px;">
+				
+				<div class="row d-flex">
+					<div class="col-md-6 col-xs-12 col-sm-12 text-center hidden-sm hidden-xs">
+						<img src="images/mentoria3.png" class="animate__animated animate__fadeInLeft wow img-responsive " alt="">
+					</div>
+					<div class="align-center col-md-6 col-sm-12 col-xs-12 d-flex">
+						<div class="about-inline">
+							<!-- <img src="images/corazon.svg" class="mb-4 animate__animated animate__fadeIn wow"" alt=""> -->
+							<h3 class="mb-4 animate__animated animate__fadeInDown wow" data-wow-delay=".2s">¿Qué lograrás al finalizar el proceso de Mentoría?</h3>
+							<hr class="mb-4" style="border-color:#E5C1C5;">
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Potenciar tu propuesta de valor
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Comunicar tu diferencial
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Reconocer a tu cliente ideal y conectar con tu audiencia
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Mejorar la estética de tus canales digitales
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Planificar y ordenar tus ideas
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Crear tu calendario contenido para redes sociales
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Habrás conocido a emprendedoras muy lo más con quienes crearás las mejores alianzas
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-6 col-xs-12 col-sm-12 text-center hidden-md hidden-lg">
+						<img src="images/mentoria3.png" class="animate__animated animate__fadeInLeft wow img-responsive " alt="">
+					</div>
+					<!-- <div class="col-md-3 col-xs-12 col-sm-12 text-right">
+						<img src="images/master2.jpg" class="animate__animated animate__fadeInRight wow" alt="">
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- TESTIMONIALS -->
+
+<!-- SERVICES -->
+	<div class="motivos">
+		<div class="container">
+			<div class="about-inline mb-4 mb-sm-0 text-center">
+				<div class="container ">
+					<h2 class=" animate__animated animate__fadeIn wow">La experiencia </h2>
+					<img src="images/separador-rosa-mini.svg" class="mt-2  animate__animated animate__fadeIn wow" data-wow-delay=".2s" alt="">
+				</div>
+			</div>
+			
+			<div class="service3 icon-box-square">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-md-3 animate__animated animate__fadeInUp wow" data-wow-delay=".4s">
+							<div class="text-center">
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h3>2 meses de<br>asesoramiento full</h3>
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-3 animate__animated animate__fadeInUp wow" data-wow-delay=".5s">
+							<div class="text-center">
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h3>Sesiones online y en vivo con emprendedoras muy lo más</h3>
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-3 animate__animated animate__fadeInUp wow" data-wow-delay=".6s">
+							<div class="text-center">
+								
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h3>Recomendaciones 100% personalizadas para tu proyecto</h3>
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-3 animate__animated animate__fadeInUp wow" data-wow-delay=".7s">
+							<div class="text-center">
+								
+								<div class="services-content">
+									<img src="images/check.svg" alt="">
+									<h3>Invitadas<br>especiales</h3>
+									
+								</div>
+							</div>
+						</div>
+							
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+	<!-- PARALLAX -->
+	<section class="parallax-content bg-multiply text-center " data-stellar-background-ratio="0.4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 tc text-center animate__animated animate__fadeInUp wow">
+					<h1 class="mb-3 mb-sm-0 text-white">¡Quiero saber más! </h1>
+					<a href="#contacto" class="btn btn-lg btn-light page-scroll">Click Aquí</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- PARALLAX -->
+	<!-- <section class="parallax-content parallax1 text-center" data-stellar-background-ratio="0.4" id="cafe">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="images/cafe-img.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-6">
+					<div class="about-inline text-center ">
+						<img src="images/cafe.svg" class="mb-4" alt="">
+						<h4 class="mb-4">Vamos a conversar sobre tu propuesta de valor y cómo diferenciarte de tu competencia, analizaremos las formas de identificar a tu cliente ideal, los aspectos a tener en cuenta para crear la personalidad e identidad de tu marca y muchas ideas para generar contenido diferente y organizarlo en un calendario. </h4>
+						<a href="#contacto" class="btn btn-lg btn-primary space20 page-scroll mt-4">Quiero Inscribirme</a>
+					</div>
+				</div>
+			</div>
+        </div>
+	</section> -->
+    
+	<div class="space100"></div>
+	
+    <!-- TESTIMONIALS -->
+		<div id="reviews" class="ejes-white mb-0">
+			
+			<div class="container" style="padding: 0px;">
+				
+				<div class="row mb-5">
+					<div class="col-md-3 col-sm-12 col-xs-12">
+
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 d-flex align-center text-center" style="flex-direction: column;">
+						<h2 class="mb-1 animate__animated animate__fadeInDown wow text-center" data-wow-delay=".2s">¿Cuáles son los ejes que desarrollaremos en cada encuentro?</h2>
+						<img src="images/separador-rosa-mini.svg" class="mt-2 text-center animate__animated animate__fadeIn wow" data-wow-delay=".4s" alt="">
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+
+					</div>
+				</div>
+
+				<div class="row animate__animated animate__fadeInDown wow" data-wow-delay=".5s">
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje1.svg" alt="">
+							<h4>Emprendedoras apasionadas:<br>Tu proyecto</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje2.svg" alt="">
+							<h4>Propuesta de valor:<br>Tu diferencial</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje3.svg" alt="">
+							<h4>Cliente ideal:<br>Tu público objetivo</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje4.svg" alt="">
+							<h4>Identidad visual:<br>Tu vidriera digital</h4>
+						</div>
+					</div>				
+				</div>
+
+				<div class="row animate__animated animate__fadeInDown wow " data-wow-delay=".5s">
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje5.svg" alt="">
+							<h4>Planificación y Objetivos de marca</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje6.svg" alt="">
+							<h4>Invitada especial (Surprise)</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje7.svg" alt="">
+							<h4>Calendario contenido para redes sociales</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="ejes">
+							<img src="images/ejes/eje8.svg" alt="">
+							<h4>Vos, yo y tu proyecto:<br><span>Una instancia 100% personalizada repasando el trabajo realizado y aplicado en tu emprendimiento</span></h4>
+						</div>
+					</div>				
+				</div>
+
+
+				<div class="row mb-5 mt-5 mb-sm-0">
+					<div class="col-md-3 col-sm-12 col-xs-12">
+
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 d-flex align-center p-1 bg-cta text-center" style="flex-direction: column;border-radius: 10px;">
+						<h2 class="mb-1 animate__animated animate__fadeInDown wow text-center" data-wow-delay=".2s">¡Atenti que son cupos súper limitados!</h2>
+						<a href="#contacto" class="btn btn-lg btn-primary space20 page-scroll mt-1 mb-0 animate__animated animate__bounceIn wow" data-wow-delay=".4s">¡Sí, me interesa!</a>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- TESTIMONIALS -->
+	
+		<!-- PARALLAX -->
+		<section class="parallax-content parallax1 mt-0" data-stellar-background-ratio="0.4" id="cafe">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="images/cafe-img.png" class="img-responsive" alt="">
+					</div>
+					<div class="col-md-6">
+						<div class="about-inline mt-5 ">
+							<h3 class="mb-4 animate__animated animate__fadeInDown wow" data-wow-delay=".2s">Ser parte de la Mentoría Grupal te dará acceso a</h3>
+							<hr class="mb-4" style="border-color:#E5D9D1;">
+							<div class="row mb-3  animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list2.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Un grupo de Whatsapp donde compartiremos inquietudes y experiencias relacionadas
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list2.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Un grupo cerrado de Facebook en donde comparto contenido exclusivo 
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list2.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Un cuadernillo de ejercicios, con tips y recomendaciones que podrás aplicar a tu proyecto durante el proceso de consultoría
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list2.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Instancias 100% personalizadas en donde te daré mis recomendaciones para avanzar aún más
+								</div>
+							</div>
+							<div class="row mb-3 animate__animated animate__fadeInUp wow" data-wow-delay=".2s">
+								<div class="col-xs-1 tilde"> <img src="images/list2.svg" alt=""></div>
+								<div class="col-xs-11 list">
+									Precio promocional en consultorías personalizadas
+								</div>
+							</div>
+						
+							<!-- <a href="#contacto" class="btn btn-lg btn-primary space20 page-scroll mt-4">Quiero Inscribirme</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<!-- Formulario -->
+	<div class="align-center d-flex intro intro-benifits2 intro-benifits-bg" id="contacto">
+		<div class="container">
+			<div class="row center-content" style="">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="intro-form bg-cream text-center animate__animated animate__bounceIn wow">
+						<h4 class="mentoria">¡Completá el formulario para<br> sumarte a la lista de espera!</h4>
+						<img src="images/separador-rosa-mini.svg" class="mt-1 mb-1" alt="">
+						<h1 class="mb-4">Próxima edición: Octubre 2020</h1>
+						<script type="text/javascript" src="https://v3.envialosimple.com/form/renderwidget/format/widget/AdministratorID/134417/FormID/2/Lang/es"></script>
+						<!-- <form action="contact-form.php" method="POST">
+							<input name="form-type" value="contact" type="hidden">
+							
+							<div class="row">
+								<div class="col-md-6 col-sm-12 form-group">
+									<input name="name" placeholder="Nombre" required type="text"  class="form-control">
+								</div>
+								<div class="col-md-6 col-sm-12 form-group">
+									<input name="last" placeholder="Apellido" required type="text"  class="form-control">
+								</div>
+								<div class="col-lg-12 col-sm-12 form-group">
+									<input name="email" placeholder="Email" required type="email"  class="form-control">
+								</div>
+								<div class="col-lg-12 col-sm-12 form-group">
+									<input name="wp" placeholder="Whatsapp" required type="number"  class="form-control">
+								</div>
+
+							</div>
+							<button class="btn btn-lg btn-primary mt-2" type="submit">Reservar lugar</button>
+							
+						</form> -->
+					</div>
+					<div class="col-md-3"></div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mt-5 mb-5">
+					<img src="images/logo.svg" alt="Marian PD">
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+</div>
+
+
+ 
+ 
+	
+
+
+
+<!-- JAVASCRIPT =============================-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/vendors/slick/slick.min.js"></script> -->
+<script src="js/vendors/jquery.easing.min.js"></script>
+<script src="js/vendors/stellar.js"></script>
+<!-- <script src="js/vendors/isotope/isotope.pkgd.js"></script>
+<script src="js/vendors/swipebox/js/jquery.swipebox.min.js"></script> -->
+<script src="js/main.js"></script>
+<script src="js/wow.js"></script>
+<script>
+	new WOW().init();
+</script>
+<!-- <script src="js/vendors/mc/jquery.ketchup.all.min.js"></script> -->
+<!-- <script src="js/vendors/mc/main.js"></script> -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+<!-- <script src="js/vendors/gmap.js"></script> -->
+</body>
+
+</html>
+
+
