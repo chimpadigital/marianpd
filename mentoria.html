@@ -42,7 +42,7 @@
 		!function (f, b, e, v, n, t, s) {
 			if (f.fbq) return; n = f.fbq = function () {
 				n.callMethod ?
-				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
 			};
 			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
 			n.queue = []; t = b.createElement(e); t.async = !0;
@@ -493,7 +493,7 @@
 		<!-- Formulario -->
 		<div class="align-center d-flex intro intro-benifits2 intro-benifits-bg" id="contacto">
 			<div class="container">
-				<div class="row center-content" style="">
+				<div class="row center-content">
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
 						<div class="intro-form bg-cream text-center animate__animated animate__bounceIn wow">
@@ -520,9 +520,12 @@
 										<input name="localidad" placeholder="Localidad" required type="text"
 											class="form-control">
 									</div>
+									<div class="col-lg-12 col-sm-12 form-group">
+										<input name="insta" placeholder="Nombre/Instagram de tu emprendimiento"
+											type="text" class="form-control">
+									</div>
 								</div>
 								<button class="btn btn-lg btn-primary mt-2" type="submit">Reservar lugar</button>
-
 							</form>
 						</div>
 						<div class="col-md-3"></div>

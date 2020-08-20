@@ -43,6 +43,7 @@ if ($res['success'] == true) {
     $name = isset($_POST["name"]) ? $_POST["name"] : null;
     $email = isset($_POST["email"]) ? $_POST["email"] : null;
     $wp = isset($_POST["wp"]) ? $_POST["wp"] : null;
+    $localidad = isset($_POST["localidad"]) ? $_POST["localidad"] : null;
     $face = isset($_POST["face"]) ? $_POST["face"] : null;
     $insta = isset($_POST["insta"]) ? $_POST["insta"] : null;
     $otras = isset($_POST["otras"]) ? $_POST["otras"] : null;
@@ -58,7 +59,9 @@ if ($res['success'] == true) {
     //nombre archivo ya creado
     //crear linea de datos separado por coma
     $fecha = date("Y-m-d H:i:s");
-    $linea = $fecha . ";" . $name . ";" . $email . ";" . $wp . ";" . $face . ";" . $insta . ";" . $otras . "\n";
+    if ($_POST['form-type'] == "contact") $linea = $fecha . ";" . $name . ";" . $email . ";" . $wp . ";" . $localidad . ";" . $face . ";" . $insta . ";" . $otras . "\n";
+    else $linea = $fecha . ";" . $name . ";" . $email . ";" . $wp . ";" . $localidad . ";" . $insta . "\n";
+
     // Escribir la linea en el fichero
     file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
     //fin grabar datos
@@ -67,6 +70,7 @@ if ($res['success'] == true) {
     $name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
     $email2 = isset($email) ? "Email: $email<br><br>" : '';
     $wp = isset($wp) ? "Whatsapp: $wp<br><br>" : '';
+    $localidad = isset($localidad) ? "Localidad: $localidad <br><br>" : '';
     $face = isset($face) ? "Facebook: $face<br><br>" : '';
     $insta = isset($insta) ? "Instagram: $insta<br><br>" : '';
     $otras = isset($otras) ? "Otras redes: $otras<br><br>" : '';
